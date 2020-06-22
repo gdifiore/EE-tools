@@ -5,7 +5,7 @@ EE-tools - Tools written to help with my IB CompSci extended essay
 
 ```
 git clone https://github.com/gdifiore/EE-tools.git
-cargo build --verbose
+cargo build --release --verbose
 ```
 
 ## How to use the tools
