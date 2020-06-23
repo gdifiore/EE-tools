@@ -55,7 +55,7 @@ pub fn runs_test(content: String) {
     let char_vec: Vec<char> = content.chars().collect();
 
     // calculate how many times a character repeats in a row
-    for i in 0..content.len()-1 {
+    for i in 0..content.len() - 1 {
         if char_vec[i as usize] != char_vec[i as usize + 1 as usize] {
             vobs += 1.0;
         }
@@ -64,7 +64,8 @@ pub fn runs_test(content: String) {
     println!("vobs is: {}", vobs);
 
     // calculate the p-value
-    let erfc_math = (vobs - 2.0 * n_float * proportion * (1.0 - proportion))/ (2.0 * (2.0 * n_float).sqrt() * proportion * (1.0 - proportion));
+    let erfc_math = (vobs - 2.0 * n_float * proportion * (1.0 - proportion))
+        / (2.0 * (2.0 * n_float).sqrt() * proportion * (1.0 - proportion));
     let p_value = erfc(erfc_math);
     println!("P-value = {}", p_value);
 

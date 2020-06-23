@@ -5,8 +5,8 @@
 // LICENSE file in the root directory of this source tree.
 //
 
-use std::process;
 use statrs::function::erf::erfc;
+use std::process;
 
 pub fn frequency_monobit(content: String) {
     // perform Frequency (Monobit) Test on [String]
@@ -28,8 +28,7 @@ pub fn frequency_monobit(content: String) {
     for c in content.chars() {
         if c == '0' {
             count -= 1;
-        }
-        else {
+        } else {
             count += 1;
         }
     }
@@ -44,14 +43,13 @@ pub fn frequency_monobit(content: String) {
 
     // calculate p-value
     let two: f64 = 2.0;
-    let p_value = erfc(sobs/two.sqrt());
+    let p_value = erfc(sobs / two.sqrt());
     println!("P-value = {}", p_value);
 
     // if p-value is greater than or equal to 0.01, it is consifered random
     if p_value >= 0.01 {
         println!("Input sequence IS accepted as random");
-    }
-    else {
+    } else {
         println!("Input sequence IS NOT accepted as random");
     }
 }

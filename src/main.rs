@@ -5,15 +5,17 @@
 // LICENSE file in the root directory of this source tree.
 //
 
-mod frequency_monobit;
 mod block_frequency;
-mod utilities;
+mod data;
+mod frequency_monobit;
 mod runs_test;
+mod utilities;
 
-use frequency_monobit::frequency_monobit;
 use block_frequency::block_frequency;
-use runs_test::runs_test;
 use clap::{App, Arg};
+use data::*;
+use frequency_monobit::frequency_monobit;
+use runs_test::runs_test;
 use std::fs::File;
 use std::io::Read;
 
@@ -28,61 +30,112 @@ fn main() {
                 .long("file")
                 .takes_value(true)
                 .value_name("FILE")
-                .required(true)
-                .help("File containing input data")
+                .required(false)
+                .help("File containing input data"),
         )
         .arg(
             Arg::with_name("frequency_monobit_test")
-            .long("frequency_monobit_test")
-            .required(false)
-            .takes_value(false)
-            .help("Runs Frequency (Monobit) Test on given data")
+                .long("frequency_monobit_test")
+                .required(false)
+                .takes_value(false)
+                .help("Runs Frequency (Monobit) Test on given data"),
         )
-        .arg (
+        .arg(
             Arg::with_name("block_frequency_test")
-            .long("block_frequency_test")
-            .required(false)
-            .takes_value(false)
-            .help("Runs Frequency Test within a Block on given data")
+                .long("block_frequency_test")
+                .required(false)
+                .takes_value(false)
+                .help("Runs Frequency Test within a Block on given data"),
         )
-        .arg (
+        .arg(
             Arg::with_name("runs_test")
-            .long("runs_test")
-            .required(false)
-            .takes_value(false)
-            .help("Runs Runs Test on given data")
+                .long("runs_test")
+                .required(false)
+                .takes_value(false)
+                .help("Runs Runs Test on given data"),
+        )
+        .arg(
+            Arg::with_name("data_plot")
+                .long("data_plot")
+                .required(false)
+                .takes_value(false)
+                .help("Runs Runs Test on given data"),
         )
         .get_matches();
 
+    if matches.is_present("frequency_monobit_test") {
+        match File::open(matches.value_of("input").unwrap()) {
+            // The file is open (no error).
+            Ok(mut file) => {
+                // move outside match statement so file isn't mandatory
+                let mut content = String::new();
 
-    match File::open(matches.value_of("input").unwrap()) {
-        // The file is open (no error).
-        Ok(mut file) => {
-            let mut content = String::new();
+                // Read all the file content into a variable (ignoring the result of the operation).
+                file.read_to_string(&mut content).unwrap();
 
-            // Read all the file content into a variable (ignoring the result of the operation).
-            file.read_to_string(&mut content).unwrap();
-
-            if matches.is_present("frequency_monobit_test") {
-                println!("Running Frequency (Monobit) Test");
                 frequency_monobit(content);
-            }
-            else if matches.is_present("block_frequency_test") {
-                block_frequency(content);
-            }
-            else if matches.is_present("runs_test") {
-                runs_test(content);
-            }
 
-            // The file is automatically closed when is goes out of scope.
+                // The file is automatically closed when is goes out of scope.
+            }
+            // Error handling.
+            Err(error) => {
+                println!(
+                    "Error opening file {}: {}",
+                    matches.value_of("input").unwrap(),
+                    error
+                );
+            }
         }
-        // Error handling.
-        Err(error) => {
-            println!(
-                "Error opening file {}: {}",
-                matches.value_of("input").unwrap(),
-                error
-            );
+    } else if matches.is_present("block_frequency_test") {
+        match File::open(matches.value_of("input").unwrap()) {
+            // The file is open (no error).
+            Ok(mut file) => {
+                // move outside match statement so file isn't mandatory
+                let mut content = String::new();
+
+                // Read all the file content into a variable (ignoring the result of the operation).
+                file.read_to_string(&mut content).unwrap();
+
+                block_frequency(content);
+
+                // The file is automatically closed when is goes out of scope.
+            }
+            // Error handling.
+            Err(error) => {
+                println!(
+                    "Error opening file {}: {}",
+                    matches.value_of("input").unwrap(),
+                    error
+                );
+            }
         }
+    } else if matches.is_present("runs_test") {
+        match File::open(matches.value_of("input").unwrap()) {
+            // The file is open (no error).
+            Ok(mut file) => {
+                // move outside match statement so file isn't mandatory
+                let mut content = String::new();
+
+                // Read all the file content into a variable (ignoring the result of the operation).
+                file.read_to_string(&mut content).unwrap();
+
+                runs_test(content);
+                // The file is automatically closed when is goes out of scope.
+            }
+            // Error handling.
+            Err(error) => {
+                println!(
+                    "Error opening file {}: {}",
+                    matches.value_of("input").unwrap(),
+                    error
+                );
+            }
+        }
+    } else if matches.is_present("data_plot") {
+        let data = read_data("test.txt".to_string());
+        let float_data = convert_data_vector(data.unwrap());
+        //let sorted_data = sort_data(float_data.unwrap());
+        let counted_data = count_data(float_data.unwrap());
+        plot_data(counted_data.unwrap());
     }
 }

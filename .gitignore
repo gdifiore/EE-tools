@@ -12,4 +12,5 @@ Cargo.lock
 /target
 **/*.rs.bk
 
-input.txt
+*.txt
+*.svg

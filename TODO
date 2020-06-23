@@ -1,0 +1,4 @@
+write data to file to be read
+automate running multiple tests
+
+is there a better way to iterate through a vector than what I did in data.rs count_data()?
