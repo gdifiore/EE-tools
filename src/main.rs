@@ -21,7 +21,7 @@ use std::io::Read;
 
 fn main() {
     let matches = App::new("EE-tools for IB CompSci Extended Essay")
-        .version("0.2.0")
+        .version("0.3.0")
         .author("Gabriel DiFiore <difioregabe@gmail.com>")
         .about("Can run a variety of NIST randomness tests, write/read/plot data and automatically run a series of tests")
         .arg(
@@ -31,7 +31,7 @@ fn main() {
                 .takes_value(true)
                 .value_name("FILE")
                 .required(false)
-                .help("File containing input data"),
+                .help("File containing input data for randomness tests"),
         )
         .arg(
             Arg::with_name("data")
@@ -40,7 +40,7 @@ fn main() {
                 .takes_value(true)
                 .value_name("DATA")
                 .required(false)
-                .help("File containing witten data"),
+                .help("File containing witten data of randomness test results"),
         )
         .arg(
             Arg::with_name("frequency_monobit_test")
