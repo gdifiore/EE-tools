@@ -1,4 +1,5 @@
-write data to file to be read
+automatically plot data
 automate running multiple tests
 
+what's the best way to organize /data/?
 is there a better way to iterate through a vector than what I did in data.rs count_data()?

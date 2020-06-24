@@ -20,10 +20,10 @@ use std::fs::File;
 use std::io::Read;
 
 fn main() {
-    let matches = App::new("Partial NIST Randomness Testing Suite (in Rust)")
-        .version("0.1.0")
+    let matches = App::new("EE-tools for IB CompSci Extended Essay")
+        .version("0.2.0")
         .author("Gabriel DiFiore <difioregabe@gmail.com>")
-        .about("Runs a specified NIST Randomness test on given data")
+        .about("Can run a variety of NIST randomness tests, write/read/plot data and automatically run a series of tests")
         .arg(
             Arg::with_name("input")
                 .short("f")
@@ -55,11 +55,18 @@ fn main() {
                 .help("Runs Runs Test on given data"),
         )
         .arg(
+            Arg::with_name("all")
+                .long("all")
+                .required(false)
+                .takes_value(false)
+                .help("Runs all tests on given data"),
+        )
+        .arg(
             Arg::with_name("data_plot")
                 .long("data_plot")
                 .required(false)
                 .takes_value(false)
-                .help("Runs Runs Test on given data"),
+                .help("for testing data plot functions on given data"),
         )
         .get_matches();
 
@@ -73,7 +80,7 @@ fn main() {
                 // Read all the file content into a variable (ignoring the result of the operation).
                 file.read_to_string(&mut content).unwrap();
 
-                frequency_monobit(content);
+                let _p_value = frequency_monobit(content);
 
                 // The file is automatically closed when is goes out of scope.
             }
@@ -96,7 +103,7 @@ fn main() {
                 // Read all the file content into a variable (ignoring the result of the operation).
                 file.read_to_string(&mut content).unwrap();
 
-                block_frequency(content);
+                let _p_value = block_frequency(content);
 
                 // The file is automatically closed when is goes out of scope.
             }
@@ -109,7 +116,34 @@ fn main() {
                 );
             }
         }
-    } else if matches.is_present("runs_test") {
+    } else if matches.is_present("all") {
+        match File::open(matches.value_of("input").unwrap()) {
+            // The file is open (no error).
+            Ok(mut file) => {
+                // move outside match statement so file isn't mandatory
+                let mut content = String::new();
+
+                // Read all the file content into a variable (ignoring the result of the operation).
+                file.read_to_string(&mut content).unwrap();
+                let content_two = content.clone();
+                let content_three = content.clone();
+
+                let _p_value = frequency_monobit(content);
+                let _p_value = block_frequency(content_two);
+                let _p_value = runs_test(content_three);
+
+                // The file is automatically closed when is goes out of scope.
+            }
+            // Error handling.
+            Err(error) => {
+                println!(
+                    "Error opening file {}: {}",
+                    matches.value_of("input").unwrap(),
+                    error
+                );
+            }
+        }
+    } else if matches.is_present("all") {
         match File::open(matches.value_of("input").unwrap()) {
             // The file is open (no error).
             Ok(mut file) => {
@@ -119,7 +153,7 @@ fn main() {
                 // Read all the file content into a variable (ignoring the result of the operation).
                 file.read_to_string(&mut content).unwrap();
 
-                runs_test(content);
+                let _p_value = runs_test(content);
                 // The file is automatically closed when is goes out of scope.
             }
             // Error handling.
@@ -132,10 +166,12 @@ fn main() {
             }
         }
     } else if matches.is_present("data_plot") {
-        let data = read_data("test.txt".to_string());
+        let data = read_data("data/data.txt".to_string());
+        //println!("{:?}", data);
         let float_data = convert_data_vector(data.unwrap());
-        //let sorted_data = sort_data(float_data.unwrap());
-        let counted_data = count_data(float_data.unwrap());
+        //println!("{:?}", float_data);
+        let sorted_data = sort_data(float_data.unwrap());
+        let counted_data = count_data(sorted_data.unwrap());
         plot_data(counted_data.unwrap());
     }
 }

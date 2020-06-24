@@ -11,15 +11,17 @@ cargo build --release --verbose
 ## How to use the tools
 After building the repository, you can use the `-h` flag like this `ee-tools -h` and it will print this screen:
 ```
-Partial NIST Randomness Testing Suite (in Rust) 0.1.0
+EE-tools for IB CompSci Extended Essay 0.2.0
 Gabriel DiFiore <difioregabe@gmail.com>
-Runs a specified NIST Randomness test on given data
+Can run a variety of NIST randomness tests, write/read/plot data and automatically run a series of tests
 
 USAGE:
-    ee-tools.exe [FLAGS] --file <FILE>
+    ee-tools.exe [FLAGS] [OPTIONS]
 
 FLAGS:
+        --all                       Runs all tests on given data
         --block_frequency_test      Runs Frequency Test within a Block on given data
+        --data_plot                 for testing data plot functions on given data
         --frequency_monobit_test    Runs Frequency (Monobit) Test on given data
     -h, --help                      Prints help information
         --runs_test                 Runs Runs Test on given data
