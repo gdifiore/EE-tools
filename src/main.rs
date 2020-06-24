@@ -34,6 +34,15 @@ fn main() {
                 .help("File containing input data"),
         )
         .arg(
+            Arg::with_name("data")
+                .short("a")
+                .long("data")
+                .takes_value(true)
+                .value_name("DATA")
+                .required(false)
+                .help("File containing witten data"),
+        )
+        .arg(
             Arg::with_name("frequency_monobit_test")
                 .long("frequency_monobit_test")
                 .required(false)
@@ -68,6 +77,20 @@ fn main() {
                 .takes_value(false)
                 .help("for testing data plot functions on given data"),
         )
+        .arg(
+            Arg::with_name("write")
+                .short("w")
+                .required(false)
+                .takes_value(false)
+                .help("If supplied data will be written to file"),
+        )
+        .arg(
+            Arg::with_name("plot")
+                .short("p")
+                .required(false)
+                .takes_value(false)
+                .help("If supplied data will be automatically plotted and outputted"),
+        )
         .get_matches();
 
     if matches.is_present("frequency_monobit_test") {
@@ -80,7 +103,11 @@ fn main() {
                 // Read all the file content into a variable (ignoring the result of the operation).
                 file.read_to_string(&mut content).unwrap();
 
-                let _p_value = frequency_monobit(content);
+                if matches.is_present("write") {
+                    let _p_value = frequency_monobit(content, true);
+                } else {
+                    let _p_value = frequency_monobit(content, false);
+                }
 
                 // The file is automatically closed when is goes out of scope.
             }
@@ -103,7 +130,11 @@ fn main() {
                 // Read all the file content into a variable (ignoring the result of the operation).
                 file.read_to_string(&mut content).unwrap();
 
-                let _p_value = block_frequency(content);
+                if matches.is_present("write") {
+                    let _p_value = block_frequency(content, true);
+                } else {
+                    let _p_value = block_frequency(content, false);
+                }
 
                 // The file is automatically closed when is goes out of scope.
             }
@@ -128,32 +159,16 @@ fn main() {
                 let content_two = content.clone();
                 let content_three = content.clone();
 
-                let _p_value = frequency_monobit(content);
-                let _p_value = block_frequency(content_two);
-                let _p_value = runs_test(content_three);
+                if matches.is_present("write") {
+                    let _p_value = frequency_monobit(content, true);
+                    let _p_value = block_frequency(content_two, true);
+                    let _p_value = runs_test(content_three, true);
+                } else {
+                    let _p_value = frequency_monobit(content, false);
+                    let _p_value = block_frequency(content_two, false);
+                    let _p_value = runs_test(content_three, false);
+                }
 
-                // The file is automatically closed when is goes out of scope.
-            }
-            // Error handling.
-            Err(error) => {
-                println!(
-                    "Error opening file {}: {}",
-                    matches.value_of("input").unwrap(),
-                    error
-                );
-            }
-        }
-    } else if matches.is_present("all") {
-        match File::open(matches.value_of("input").unwrap()) {
-            // The file is open (no error).
-            Ok(mut file) => {
-                // move outside match statement so file isn't mandatory
-                let mut content = String::new();
-
-                // Read all the file content into a variable (ignoring the result of the operation).
-                file.read_to_string(&mut content).unwrap();
-
-                let _p_value = runs_test(content);
                 // The file is automatically closed when is goes out of scope.
             }
             // Error handling.

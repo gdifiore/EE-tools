@@ -1,3 +1,4 @@
+use chrono::offset;
 use plotlib::page::Page;
 use plotlib::repr::BarChart;
 use plotlib::style::BoxStyle;
@@ -134,5 +135,9 @@ pub fn plot_data(p_value_count: BTreeMap<String, i32>) {
         .x_label("P-Value")
         .y_label("Frequency");
 
-    Page::single(&v).save("barchart.svg").expect("saving svg");
+    let _dir = fs::create_dir_all("charts/");
+    let date = offset::Local::now().to_string().replace(':', "-");
+    let filepath = format!("{}{}{}{}", "charts/", "bargraph - ", date, ".svg");
+    println!("{}", filepath);
+    let _file_name = Page::single(&v).save(filepath).expect("saving svg");
 }
