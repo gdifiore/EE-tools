@@ -18,7 +18,7 @@ use utilities::file_to_vector;
 
 fn main() {
     let matches = App::new("EE-tools for IB CompSci Extended Essay")
-        .version("1.0.0")
+        .version("1.0.1")
         .author("Gabriel DiFiore <difioregabe@gmail.com>")
         .about("Can run a variety of NIST randomness tests, write/read/plot data and automatically run a series of tests")
         .arg(
@@ -35,7 +35,7 @@ fn main() {
                 .short("f")
                 .long("file")
                 .takes_value(true)
-                .value_name("files")
+                .value_name("file")
                 .required(true)
                 .help("File containing input data for randomness tests"),
         )
@@ -44,12 +44,12 @@ fn main() {
     if matches.is_present("test") {
         let data = file_to_vector(matches.value_of("input").unwrap());
         let copy_data = data.unwrap().clone();
-        let n_tests = copy_data.len() as i32;
+        let n_tests: i32 = copy_data.len() as i32;
 
         if matches.value_of("test").unwrap() == "frequency_monobit_test" {
             test_handler("frequency_monobit_test", n_tests, copy_data);
-        } else if matches.value_of("test").unwrap() == "block_frequency" {
-            test_handler("frequency_monobit_test", n_tests, copy_data);
+        } else if matches.value_of("test").unwrap() == "block_frequency_test" {
+            test_handler("block_frequency_test", n_tests, copy_data);
         } else if matches.value_of("test").unwrap() == "runs_test" {
             test_handler("runs_test", n_tests, copy_data);
         }

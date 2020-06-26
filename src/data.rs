@@ -5,6 +5,7 @@
 // LICENSE file in the root directory of this source tree.
 //
 
+use chrono::Local;
 use plotlib::page::Page;
 use plotlib::repr::BarChart;
 use plotlib::style::BoxStyle;
@@ -13,7 +14,6 @@ use std::collections::BTreeMap;
 use std::fs;
 use std::io;
 use std::process;
-use chrono::Local;
 
 pub fn count_data(data: Vec<f64>) -> io::Result<BTreeMap<String, i32>> {
     let mut point_1: i32 = 0;
@@ -119,7 +119,7 @@ pub fn plot_data(p_value_count: BTreeMap<String, i32>, test_name: String) {
         .y_label("Frequency");
 
     let _dir = fs::create_dir_all("charts/");
-    let date = Local::now().format("%a %b %e %T %Y").to_string().replace(':', "-");
+    let date = Local::now().format("%c").to_string().replace(':', "-");
     let filepath = format!("{}{}{}{}{}", "charts/", test_name, " - ", date, ".svg");
     let _file_name = Page::single(&v).save(filepath).expect("saving svg");
 }

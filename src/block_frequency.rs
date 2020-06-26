@@ -18,7 +18,7 @@ pub fn block_frequency(content: &String) -> io::Result<f64> {
     println!("PERFORMING FREQUENCY WITHIN A BLOCK TEST \n");
 
     println!("Data: {}\n", content);
-    let n = content.trim_end().chars().count();
+    let n: usize = content.trim_end().chars().count();
 
     // if amount if input data is insufficient (n<100), quit the program early
     if n < 100 {
@@ -48,7 +48,7 @@ pub fn block_frequency(content: &String) -> io::Result<f64> {
     // if more data is availible than is able to make even blocks, remove extra data from vector
     let mut blocks: Vec<String> = sub_strings(&content, big_m as usize);
     let block_to_delete: f64 = n as f64 / block_size as f64;
-    let delete_block = round::ceil(block_to_delete, 0);
+    let delete_block: f64 = round::ceil(block_to_delete, 0);
 
     if block_to_delete != delete_block {
         blocks.remove(delete_block as usize - 1);
@@ -73,9 +73,9 @@ pub fn block_frequency(content: &String) -> io::Result<f64> {
 
     println!("Proportion Sum: {}", proportion_sum);
     // calculate p-value
-    let chi_squared = 4 as f64 * block_size as f64 * proportion_sum;
+    let chi_squared: f64 = 4 as f64 * block_size as f64 * proportion_sum;
     println!("Chi-Squared Value: {}", chi_squared);
-    let p_value = gamma_ur(num_of_blocks / 2.0 as f64, chi_squared / 2.0);
+    let p_value: f64 = gamma_ur(num_of_blocks / 2.0 as f64, chi_squared / 2.0);
 
     println!("P-value = {}", p_value);
 

@@ -16,7 +16,7 @@ pub fn runs_test(content: &String) -> io::Result<f64> {
     println!("PERFORMING RUNS TEST\n");
 
     println!("Data: {}\n", content);
-    let n = content.trim_end().chars().count();
+    let n: usize = content.trim_end().chars().count();
 
     // if amount if input data is insufficient (n<100), quit the program early
     if n < 100 {
@@ -35,6 +35,7 @@ pub fn runs_test(content: &String) -> io::Result<f64> {
             ones += 1.0;
         }
     }
+    println!("{}", ones);
 
     // calculate pre-test proportion value
     let proportion: f64 = ones / n as f64;
@@ -70,9 +71,9 @@ pub fn runs_test(content: &String) -> io::Result<f64> {
     println!("vobs is: {}", vobs);
 
     // calculate the p-value
-    let erfc_math = (vobs - 2.0 * n_float * proportion * (1.0 - proportion))
+    let erfc_math: f64 = (vobs - 2.0 * n_float * proportion * (1.0 - proportion)).abs()
         / (2.0 * (2.0 * n_float).sqrt() * proportion * (1.0 - proportion));
-    let p_value = erfc(erfc_math);
+    let p_value: f64 = erfc(erfc_math);
     println!("P-value = {}", p_value);
 
     // if p-value is greater than or equal to 0.01, it is consifered random

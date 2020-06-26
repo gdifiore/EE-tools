@@ -6,11 +6,11 @@
 //
 
 use itertools::Itertools;
+use std::fs::File;
 use std::io;
 use std::io::BufRead;
 use std::io::BufReader;
 use std::path::Path;
-use std::fs::File;
 
 pub fn sub_strings(source: &str, sub_size: usize) -> Vec<String> {
     // split string [&str] every [usize] characters
@@ -24,5 +24,7 @@ pub fn sub_strings(source: &str, sub_size: usize) -> Vec<String> {
 }
 
 pub fn file_to_vector(filename: impl AsRef<Path>) -> io::Result<Vec<String>> {
+    // read file [filename]line by line and output as a vector [Vec<String>]
+
     BufReader::new(File::open(filename)?).lines().collect()
 }

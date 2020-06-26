@@ -1,4 +1,1 @@
-ISSUES:
- sequence: "0010000010110110100101101110001011111110001001001010000001010000011101000111111111001100010101011111" returns a p-value over 1 on the runs test
- Exact 50/50 runs return an error
 is there a better way to iterate through a vector than what I did in data.rs count_data()?

@@ -16,7 +16,7 @@ pub fn frequency_monobit(content: &String) -> io::Result<f64> {
     println!("PERFORMING FREQUENCY (MONOBIT) TEST\n");
 
     println!("Data: {}\n", content);
-    let n = content.trim_end().chars().count();
+    let n: usize = content.trim_end().chars().count();
 
     // if amount if input data is insufficient (n<100), quit the program early
     if n < 100 {
@@ -40,14 +40,14 @@ pub fn frequency_monobit(content: &String) -> io::Result<f64> {
     println!("S100 = {}", count);
 
     // calculate sobs value
-    let real_len = n as f64;
-    let real_count = count as f64;
-    let sobs = real_count.abs() / real_len.sqrt();
+    let real_len: f64 = n as f64;
+    let real_count: f64 = count as f64;
+    let sobs: f64 = real_count.abs() / real_len.sqrt();
     println!("sobs = {}", sobs);
 
     // calculate p-value
     let two: f64 = 2.0;
-    let p_value = erfc(sobs / two.sqrt());
+    let p_value: f64 = erfc(sobs / two.sqrt());
     println!("P-value = {}", p_value);
 
     // if p-value is greater than or equal to 0.01, it is consifered random
