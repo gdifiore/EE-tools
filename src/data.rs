@@ -16,6 +16,8 @@ use std::io;
 use std::process;
 
 pub fn count_data(data: Vec<f64>) -> io::Result<BTreeMap<String, i32>> {
+    // count occurences of p-values (between 2 values e.g. 0.0-0.1)
+
     let mut point_1: i32 = 0;
     let mut point_2: i32 = 0;
     let mut point_3: i32 = 0;
@@ -72,7 +74,7 @@ pub fn count_data(data: Vec<f64>) -> io::Result<BTreeMap<String, i32>> {
 }
 
 pub fn plot_data(p_value_count: BTreeMap<String, i32>, test_name: String) {
-    // plots data on a bar graph
+    // plot p-value data on a bar graph
     let b1 = BarChart::new(p_value_count["0.1"].into())
         .label("0-.1")
         .style(&BoxStyle::new().fill("red"));

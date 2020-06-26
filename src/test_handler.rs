@@ -11,6 +11,8 @@ use crate::frequency_monobit::frequency_monobit;
 use crate::runs_test::runs_test;
 
 pub fn test_handler(test_name: &str, n_of_tests: i32, data: Vec<String>) {
+    // automated testing handler
+
     let mut p_values: Vec<f64> = Vec::new();
     if test_name == "frequency_monobit_test" {
         for i in 0..n_of_tests {

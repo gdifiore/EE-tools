@@ -20,7 +20,7 @@ fn main() {
     let matches = App::new("EE-tools for IB CompSci Extended Essay")
         .version("1.0.1")
         .author("Gabriel DiFiore <difioregabe@gmail.com>")
-        .about("Can run a variety of NIST randomness tests, write/read/plot data and automatically run a series of tests")
+        .about("Program to automatically run a series of NIST randomness tests from an input file and plot the data")
         .arg(
             Arg::with_name("test")
                 .short("t")
