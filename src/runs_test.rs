@@ -6,12 +6,10 @@
 //
 
 use statrs::function::erf::erfc;
-use std::fs::OpenOptions;
 use std::io;
-use std::io::Write;
 use std::process;
 
-pub fn runs_test(content: String, write: bool) -> io::Result<f64> {
+pub fn runs_test(content: &String) -> io::Result<f64> {
     // perform Runs Test on [String]
     // return p-value as [f64]
 
@@ -50,11 +48,13 @@ pub fn runs_test(content: String, write: bool) -> io::Result<f64> {
     // test if proportion - 1/2 is greater than or equal to tau
     // if it is, we end the test as it has failed
     let proportion_minus_point_five = proportion as f64 - 0.5;
+    println!("{}", proportion_minus_point_five.abs());
 
     if proportion_minus_point_five.abs() >= tau {
         println!("The absolute value of the proportion - 1/2 is greater than or equal to tau");
         println!("This data set has failed the Frequency (Monobit) Test, and the Runs Test will not be run");
-        process::exit(1);
+        let p_value: f64 = 0.0;
+        return Ok(p_value);
     }
 
     let mut vobs: f64 = 1.0;
@@ -80,23 +80,6 @@ pub fn runs_test(content: String, write: bool) -> io::Result<f64> {
         println!("Input sequence IS accepted as random\n\n");
     } else {
         println!("Input sequence IS NOT accepted as random\n\n");
-    }
-
-    if write == true {
-        // writing to file
-        let filename = "data/data.txt";
-
-        let mut file = OpenOptions::new()
-            .append(true)
-            .create(true)
-            .open(filename)
-            .unwrap();
-
-        let newline = "\n";
-        let mut p_value_string = p_value.to_string();
-        p_value_string = format!("{}{}", newline, p_value_string);
-        file.write_all(p_value_string.as_bytes())
-            .expect("could not write p-value to file");
     }
 
     Ok(p_value)

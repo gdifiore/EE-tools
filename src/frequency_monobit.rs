@@ -6,12 +6,10 @@
 //
 
 use statrs::function::erf::erfc;
-use std::fs::OpenOptions;
 use std::io;
-use std::io::Write;
 use std::process;
 
-pub fn frequency_monobit(content: String, write: bool) -> io::Result<f64> {
+pub fn frequency_monobit(content: &String) -> io::Result<f64> {
     // perform Frequency (Monobit) Test on [String]
     // return p-value as [f64]
 
@@ -57,23 +55,6 @@ pub fn frequency_monobit(content: String, write: bool) -> io::Result<f64> {
         println!("Input sequence IS accepted as random\n\n");
     } else {
         println!("Input sequence IS NOT accepted as random\n\n");
-    }
-
-    if write == true {
-        // writing to file
-        let filename = "data/data.txt";
-
-        let mut file = OpenOptions::new()
-            .append(true)
-            .create(true)
-            .open(filename)
-            .unwrap();
-
-        let newline = "\n";
-        let mut p_value_string = p_value.to_string();
-        p_value_string = format!("{}{}", newline, p_value_string);
-        file.write_all(p_value_string.as_bytes())
-            .expect("could not write p-value to file");
     }
 
     Ok(p_value)

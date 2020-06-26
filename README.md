@@ -35,7 +35,7 @@ OPTIONS:
 ```
 
 ## What's in here?
-This collection is mostly tools for statistical analysis of random number generators based on the [NIST Standard](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-22r1a.pdf), however I will probably include the tools I use to manage and display the data.
+This collection is tools for statistical analysis of random number generators based on the [NIST Standard](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-22r1a.pdf), and tools I use to manage and display the data.
 
 ## Why rust?
 I'd never used it before (thus the non-idiomatic nature of this code) and wanted to try and use it, and thought this was the perfect excuse to learn it.

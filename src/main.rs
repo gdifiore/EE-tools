@@ -9,184 +9,49 @@ mod block_frequency;
 mod data;
 mod frequency_monobit;
 mod runs_test;
+mod test_handler;
 mod utilities;
 
-use block_frequency::block_frequency;
 use clap::{App, Arg};
-use data::*;
-use frequency_monobit::frequency_monobit;
-use runs_test::runs_test;
-use std::fs::File;
-use std::io::Read;
+use test_handler::test_handler;
+use utilities::file_to_vector;
 
 fn main() {
     let matches = App::new("EE-tools for IB CompSci Extended Essay")
-        .version("0.3.0")
+        .version("1.0.0")
         .author("Gabriel DiFiore <difioregabe@gmail.com>")
         .about("Can run a variety of NIST randomness tests, write/read/plot data and automatically run a series of tests")
+        .arg(
+            Arg::with_name("test")
+                .short("t")
+                .long("test")
+                .required(true)
+                .takes_value(true)
+                .value_name("test_name")
+                .help("Test to perform n trials of (frequency_monobit, block_frequency, runs_test)")
+        )
         .arg(
             Arg::with_name("input")
                 .short("f")
                 .long("file")
                 .takes_value(true)
-                .value_name("FILE")
-                .required(false)
+                .value_name("files")
+                .required(true)
                 .help("File containing input data for randomness tests"),
-        )
-        .arg(
-            Arg::with_name("data")
-                .short("a")
-                .long("data")
-                .takes_value(true)
-                .value_name("DATA")
-                .required(false)
-                .help("File containing witten data of randomness test results"),
-        )
-        .arg(
-            Arg::with_name("frequency_monobit_test")
-                .long("frequency_monobit_test")
-                .required(false)
-                .takes_value(false)
-                .help("Runs Frequency (Monobit) Test on given data"),
-        )
-        .arg(
-            Arg::with_name("block_frequency_test")
-                .long("block_frequency_test")
-                .required(false)
-                .takes_value(false)
-                .help("Runs Frequency Test within a Block on given data"),
-        )
-        .arg(
-            Arg::with_name("runs_test")
-                .long("runs_test")
-                .required(false)
-                .takes_value(false)
-                .help("Runs Runs Test on given data"),
-        )
-        .arg(
-            Arg::with_name("all")
-                .long("all")
-                .required(false)
-                .takes_value(false)
-                .help("Runs all tests on given data"),
-        )
-        .arg(
-            Arg::with_name("data_plot")
-                .long("data_plot")
-                .required(false)
-                .takes_value(false)
-                .help("for testing data plot functions on given data"),
-        )
-        .arg(
-            Arg::with_name("write")
-                .short("w")
-                .required(false)
-                .takes_value(false)
-                .help("If supplied data will be written to file"),
-        )
-        .arg(
-            Arg::with_name("plot")
-                .short("p")
-                .required(false)
-                .takes_value(false)
-                .help("If supplied data will be automatically plotted and outputted"),
         )
         .get_matches();
 
-    if matches.is_present("frequency_monobit_test") {
-        match File::open(matches.value_of("input").unwrap()) {
-            // The file is open (no error).
-            Ok(mut file) => {
-                // move outside match statement so file isn't mandatory
-                let mut content = String::new();
+    if matches.is_present("test") {
+        let data = file_to_vector(matches.value_of("input").unwrap());
+        let copy_data = data.unwrap().clone();
+        let n_tests = copy_data.len() as i32;
 
-                // Read all the file content into a variable (ignoring the result of the operation).
-                file.read_to_string(&mut content).unwrap();
-
-                if matches.is_present("write") {
-                    let _p_value = frequency_monobit(content, true);
-                } else {
-                    let _p_value = frequency_monobit(content, false);
-                }
-
-                // The file is automatically closed when is goes out of scope.
-            }
-            // Error handling.
-            Err(error) => {
-                println!(
-                    "Error opening file {}: {}",
-                    matches.value_of("input").unwrap(),
-                    error
-                );
-            }
+        if matches.value_of("test").unwrap() == "frequency_monobit_test" {
+            test_handler("frequency_monobit_test", n_tests, copy_data);
+        } else if matches.value_of("test").unwrap() == "block_frequency" {
+            test_handler("frequency_monobit_test", n_tests, copy_data);
+        } else if matches.value_of("test").unwrap() == "runs_test" {
+            test_handler("runs_test", n_tests, copy_data);
         }
-    } else if matches.is_present("block_frequency_test") {
-        match File::open(matches.value_of("input").unwrap()) {
-            // The file is open (no error).
-            Ok(mut file) => {
-                // move outside match statement so file isn't mandatory
-                let mut content = String::new();
-
-                // Read all the file content into a variable (ignoring the result of the operation).
-                file.read_to_string(&mut content).unwrap();
-
-                if matches.is_present("write") {
-                    let _p_value = block_frequency(content, true);
-                } else {
-                    let _p_value = block_frequency(content, false);
-                }
-
-                // The file is automatically closed when is goes out of scope.
-            }
-            // Error handling.
-            Err(error) => {
-                println!(
-                    "Error opening file {}: {}",
-                    matches.value_of("input").unwrap(),
-                    error
-                );
-            }
-        }
-    } else if matches.is_present("all") {
-        match File::open(matches.value_of("input").unwrap()) {
-            // The file is open (no error).
-            Ok(mut file) => {
-                // move outside match statement so file isn't mandatory
-                let mut content = String::new();
-
-                // Read all the file content into a variable (ignoring the result of the operation).
-                file.read_to_string(&mut content).unwrap();
-                let content_two = content.clone();
-                let content_three = content.clone();
-
-                if matches.is_present("write") {
-                    let _p_value = frequency_monobit(content, true);
-                    let _p_value = block_frequency(content_two, true);
-                    let _p_value = runs_test(content_three, true);
-                } else {
-                    let _p_value = frequency_monobit(content, false);
-                    let _p_value = block_frequency(content_two, false);
-                    let _p_value = runs_test(content_three, false);
-                }
-
-                // The file is automatically closed when is goes out of scope.
-            }
-            // Error handling.
-            Err(error) => {
-                println!(
-                    "Error opening file {}: {}",
-                    matches.value_of("input").unwrap(),
-                    error
-                );
-            }
-        }
-    } else if matches.is_present("data_plot") {
-        let data = read_data("data/data.txt".to_string());
-        //println!("{:?}", data);
-        let float_data = convert_data_vector(data.unwrap());
-        //println!("{:?}", float_data);
-        let sorted_data = sort_data(float_data.unwrap());
-        let counted_data = count_data(sorted_data.unwrap());
-        plot_data(counted_data.unwrap());
     }
 }
