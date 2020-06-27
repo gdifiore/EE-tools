@@ -10,7 +10,7 @@ use crate::data::*;
 use crate::frequency_monobit::frequency_monobit;
 use crate::runs_test::runs_test;
 
-pub fn test_handler(test_name: &str, n_of_tests: i32, data: Vec<String>) {
+pub fn test_handler(test_name: &str, n_of_tests: i32, data: Vec<String>, source: &str) {
     // automated testing handler
 
     let mut p_values: Vec<f64> = Vec::new();
@@ -21,7 +21,7 @@ pub fn test_handler(test_name: &str, n_of_tests: i32, data: Vec<String>) {
             p_values.push(p_value.unwrap());
         }
         let counted_data = count_data(p_values);
-        plot_data(counted_data.unwrap(), test_name.to_string());
+        plot_data(counted_data.unwrap(), test_name.to_string(), source);
     } else if test_name == "block_frequency_test" {
         for i in 0..n_of_tests {
             let content = &data[i as usize];
@@ -29,7 +29,7 @@ pub fn test_handler(test_name: &str, n_of_tests: i32, data: Vec<String>) {
             p_values.push(p_value.unwrap());
         }
         let counted_data = count_data(p_values);
-        plot_data(counted_data.unwrap(), test_name.to_string());
+        plot_data(counted_data.unwrap(), test_name.to_string(), source);
     } else if test_name == "runs_test" {
         for i in 0..n_of_tests {
             let content = &data[i as usize];
@@ -38,6 +38,6 @@ pub fn test_handler(test_name: &str, n_of_tests: i32, data: Vec<String>) {
             p_values.push(p_value.unwrap());
         }
         let counted_data = count_data(p_values);
-        plot_data(counted_data.unwrap(), test_name.to_string());
+        plot_data(counted_data.unwrap(), test_name.to_string(), source);
     }
 }

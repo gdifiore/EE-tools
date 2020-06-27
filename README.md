@@ -11,12 +11,12 @@ cargo build --release --verbose
 ## How to use the tools
 After building the repository, you can use the `-h` flag like this `ee-tools -h` and it will print this screen:
 ```
-EE-tools for IB CompSci Extended Essay 1.0.1
+EE-tools for IB CompSci Extended Essay 1.1.0
 Gabriel DiFiore <difioregabe@gmail.com>
 Program to automatically run a series of NIST randomness tests from an input file and plot the data
 
 USAGE:
-    ee-tools.exe --file <file> --test <test_name>
+    ee-tools.exe --file <file> --source <source> --test <test_name>
 
 FLAGS:
     -h, --help       Prints help information
@@ -25,6 +25,7 @@ FLAGS:
 OPTIONS:
     -f, --file <file>         File containing input data for randomness tests
     -t, --test <test_name>    Test to perform n trials of (frequency_monobit, block_frequency, runs_test)
+    -s, --source <source>     Source of Data (random.org, HotBits, etc.)
 ```
 
 Put all trial data in a singular file, separated by newlines, and the program will automatically parse it and run the tests.

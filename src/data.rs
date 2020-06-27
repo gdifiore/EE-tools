@@ -73,7 +73,7 @@ pub fn count_data(data: Vec<f64>) -> io::Result<BTreeMap<String, i32>> {
     return Ok(p_value_count);
 }
 
-pub fn plot_data(p_value_count: BTreeMap<String, i32>, test_name: String) {
+pub fn plot_data(p_value_count: BTreeMap<String, i32>, test_name: String, source: &str) {
     // plot p-value data on a bar graph
     let b1 = BarChart::new(p_value_count["0.1"].into())
         .label("0-.1")
@@ -122,6 +122,6 @@ pub fn plot_data(p_value_count: BTreeMap<String, i32>, test_name: String) {
 
     let _dir = fs::create_dir_all("charts/");
     let date = Local::now().format("%c").to_string().replace(':', "-");
-    let filepath = format!("{}{}{}{}{}", "charts/", test_name, " - ", date, ".svg");
+    let filepath = format!("{}{}{}{}{}{}", "charts/", source, test_name, " - ", date, ".svg");
     let _file_name = Page::single(&v).save(filepath).expect("saving svg");
 }

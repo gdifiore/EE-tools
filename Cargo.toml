@@ -1,6 +1,6 @@
 [package]
 name = "ee-tools"
-version = "1.0.0"
+version = "1.1.0"
 authors = ["Gabriel DiFiore <difioregabe@gmail.com>"]
 homepage = "https://github.com/gdifiore/EE-tools"
 repository = "https://github.com/gdifiore/EE-tools"
