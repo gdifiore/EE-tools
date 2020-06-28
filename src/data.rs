@@ -122,6 +122,6 @@ pub fn plot_data(p_value_count: BTreeMap<String, i32>, test_name: String, source
 
     let _dir = fs::create_dir_all("charts/");
     let date = Local::now().format("%c").to_string().replace(':', "-");
-    let filepath = format!("{}{}{}{}{}{}", "charts/", source, test_name, " - ", date, ".svg");
+    let filepath = format!("{}{} {}{}{}{}", "charts/", source, test_name, " - ", date, ".svg");
     let _file_name = Page::single(&v).save(filepath).expect("saving svg");
 }

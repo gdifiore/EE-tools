@@ -16,3 +16,4 @@ Cargo.lock
 *.svg
 *.exe
 /charts/
+.env
