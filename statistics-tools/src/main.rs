@@ -17,7 +17,7 @@ use test_handler::test_handler;
 use utilities::file_to_vector;
 
 fn main() {
-    let matches = App::new("EE-tools for IB CompSci Extended Essay")
+    let matches = App::new("statistics-tools (Part of EE-tools for IB CompSci Extended Essay)")
         .version("1.1.0")
         .author("Gabriel DiFiore <difioregabe@gmail.com>")
         .about("Program to automatically run a series of NIST randomness tests from an input file and plot the data")
