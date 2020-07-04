@@ -6,7 +6,6 @@
 //
 
 pub mod block_frequency;
-//pub mod entropy_test;
 pub mod frequency_monobit;
 pub mod runs_test;
 pub mod uniform_distribution;
