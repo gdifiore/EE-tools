@@ -59,6 +59,8 @@ pub fn uniform_distribution(data: BTreeMap<String, i32>, n_tests: i32) -> io::Re
 
     let p_value: f32 = igamc(9.0 / 2.0, big_x_squared / 2.0);
 
+    println!("Uniform Distribution P-value = {}", p_value);
+
     if p_value >= 0.0001 {
         println!("The data is considered uniformly distributed\n\n");
     } else {
