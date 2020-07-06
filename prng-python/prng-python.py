@@ -1,4 +1,12 @@
+#
+# (c) 2020 Gabriel DiFiore <difioregabe@gmail.com>
+#
+# This source code is licensed under the MIT license found in the
+# LICENSE file in the root directory of this source tree.
+#
+
 import sys
+
 
 def LCG(a, c, m, seed):
     xi = seed
@@ -7,10 +15,12 @@ def LCG(a, c, m, seed):
         xi = xf
         yield xf
 
+
 def random_sample(n, interval, seed):
     lower, upper = interval[0], interval[1]
     sample = []
-    glibc = LCG(1103515245, 12345, 2 ** 32, seed)       # parameters as in GNU C Library
+    # parameters as in GNU C Library
+    glibc = LCG(1103515245, 12345, 2 ** 32, seed)
 
     for i in range(n):
         observation = (upper - lower) * (next(glibc) / (2 ** 32 - 1)) + lower
@@ -18,6 +28,8 @@ def random_sample(n, interval, seed):
 
     return sample
 
-sample = random_sample(100, [0, 2], int(sys.argv[1]))   # 100 random numbers between 0 and 1
+
+# 100 random numbers between 0 and 1
+sample = random_sample(100, [0, 2], int(sys.argv[1]))
 sample = ''.join(str(i) for i in sample)
 print(sample)
