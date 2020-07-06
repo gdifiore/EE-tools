@@ -10,7 +10,7 @@ git clone https://github.com/gdifiore/EE-tools.git
 cargo build --release --verbose
 ```
 
-## How to use the tools
+## How to use the tool
 After building the repository, you can use the `-h` flag like this `ee-tools -h` and it will print this screen:
 ```
 EE-tools for IB CompSci Extended Essay 1.1.0

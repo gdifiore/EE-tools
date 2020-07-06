@@ -16,7 +16,6 @@ from bs4 import BeautifulSoup
 RANDOM_API_KEY = ""
 HOTBITS_API_KEY = ""
 
-
 def randomorg():
     url = "https://api.random.org/json-rpc/2/invoke"
 
@@ -34,14 +33,14 @@ def randomorg():
         },
         "id": 32749
     }
-    print(payload)
     response = requests.post(url, json=payload).json()
 
     data = response["result"]["random"]["data"]
     data = [str(data) for data in data]
     data = "".join(data)
+    data = data + "\n"
 
-    f = open("input.txt", "w")
+    f = open("input.txt", "a+")
     f.write(data)
     f.close()
 

@@ -7,7 +7,6 @@
 
 import sys
 
-
 def LCG(a, c, m, seed):
     xi = seed
     while True:
@@ -29,7 +28,11 @@ def random_sample(n, interval, seed):
     return sample
 
 
-# 100 random numbers between 0 and 1
-sample = random_sample(100, [0, 2], int(sys.argv[1]))
+# 1000 random numbers between 0 and 1
+sample = random_sample(1000, [0, 2], int(sys.argv[1]))
 sample = ''.join(str(i) for i in sample)
-print(sample)
+sample = sample + "\n"
+
+f = open("input.txt", "a+")
+f.write(sample)
+f.close()
