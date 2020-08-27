@@ -11,6 +11,7 @@ mod data;
 mod test_handler;
 mod utilities;
 
+use std::time::Instant;
 use crate::statistics::*;
 use clap::{App, Arg};
 use test_handler::test_handler;
@@ -53,6 +54,8 @@ fn main() {
         )
         .get_matches();
 
+    let now = Instant::now();
+
     if matches.is_present("test") {
         let data = file_to_vector(matches.value_of("input").unwrap());
         let copy_data = data.unwrap().clone();
@@ -66,5 +69,10 @@ fn main() {
         } else if matches.value_of("test").unwrap() == "runs_test" {
             test_handler("runs_test", n_tests, copy_data, source.unwrap());
         }
+
     }
+
+    let elapsed = now.elapsed();
+    println!("Elapsed: {} ms",
+             (elapsed.as_secs() * 1_000) + (elapsed.subsec_nanos() / 1_000_000) as u64);
 }

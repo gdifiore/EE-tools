@@ -6,6 +6,7 @@
 #
 
 import sys
+from textwrap import wrap
 
 def LCG(a, c, m, seed):
     xi = seed
@@ -27,12 +28,13 @@ def random_sample(n, interval, seed):
 
     return sample
 
+# 500000 random numbers between 0 and 1
+sample = random_sample(500000, [0, 2], int(sys.argv[1]))
+sample = ''.join(str(e) for e in sample)
+sample = wrap(sample, 1000)
 
-# 1000 random numbers between 0 and 1
-sample = random_sample(1000, [0, 2], int(sys.argv[1]))
-sample = ''.join(str(i) for i in sample)
-sample = sample + "\n"
+with open('input.txt', 'a+') as f:
+    for rng in sample:
+        f.write('%s\n' % rng)
 
-f = open("input.txt", "a+")
-f.write(sample)
 f.close()
