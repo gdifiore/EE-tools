@@ -38,3 +38,5 @@ with open('input.txt', 'a+') as f:
         f.write('%s\n' % rng)
 
 f.close()
+
+# seed_used = 1598465313

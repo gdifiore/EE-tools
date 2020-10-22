@@ -1,0 +1,15 @@
+ee-tools.exe -f data\randomorg-data.txt -s randomorg -t frequency_monobit_test > results\randomorg-fmt-results.txt
+ee-tools.exe -f data\randomorg-data.txt -s randomorg -t block_frequency_test > results\randomorg-bft-results.txt
+ee-tools.exe -f data\randomorg-data.txt -s randomorg -t runs_test > results\randomorg-rt-results.txt
+
+ee-tools.exe -f data\quantum-data.txt -s quantum -t frequency_monobit_test > results\quantum-fmt-results.txt
+ee-tools.exe -f data\quantum-data.txt -s quantum -t block_frequency_test > results\quantum-bft-results.txt
+ee-tools.exe -f data\quantum-data.txt -s quantum -t runs_test > results\quantum-rt-results.txt
+
+ee-tools.exe -f data\hotbits-data.txt -s hotbits -t frequency_monobit_test > results\hotbits-fmt-results.txt
+ee-tools.exe -f data\hotbits-data.txt -s hotbits -t block_frequency_test > results\hotbits-bft-results.txt
+ee-tools.exe -f data\hotbits-data.txt -s hotbits -t runs_test > results\hotbits-rt-results.txt
+
+ee-tools.exe -f data\lcg-data.txt -s lcg -t frequency_monobit_test > results\lcg-fmt-results.txt
+ee-tools.exe -f data\lcg-data.txt -s lcg -t block_frequency_test > results\lcg-bft-results.txt
+ee-tools.exe -f data\lcg-data.txt -s lcg -t runs_test > results\lcg-rt-results.txt

@@ -53,6 +53,7 @@ def hotbits():
 
     with open('Hotbits.api', 'rb') as f:
         hexdata = f.read().hex()
+        f.close()
 
     integer = int(hexdata, 16)
     i = format(integer, '0>42b')
@@ -64,6 +65,7 @@ def hotbits():
     f.close()
 
     os.remove('Hotbits.api')
+    print(os.path.exists("Hotbits.api"))
 
 def quantum():
     resp = requests.get('https://qrng.anu.edu.au/RawBin.php')
@@ -72,23 +74,24 @@ def quantum():
     data = soup.find("table", class_ = "rng")
     bins = data.get_text()
 
-    string = bins[3:-24] + "\n"
+    string = bins[3:-26] + "\n"
     f = open("input.txt", "a+")
     f.write(string)
     f.close()
 
-
+# need to run this twice over two days, the bits we want exceed the daily limit
 if sys.argv[1] == "randomorg":
-    for i in range(0, 200):
+    for i in range(0, 250):
         randomorg()
-        time.sleep(5)
+        time.sleep(1)
 
 if sys.argv[1] == "hotbits":
-    for i in range(0, 200):
+    for i in range(0, 88):
+        print("test")
         hotbits()
-        time.sleep(5)
+        time.sleep(1)
 
 if sys.argv[1] == "quantum":
-    for i in range(0, 200):
+    for i in range(0, 500):
         quantum()
-        time.sleep(5)
+        time.sleep(1)

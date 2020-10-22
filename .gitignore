@@ -12,12 +12,10 @@ Cargo.lock
 /target
 **/*.rs.bk
 
-*.txt
+input.txt
 *.svg
 *.exe
 /charts/
-/data/
-/results/
 .env
 
 # Vim stuff
