@@ -8,9 +8,9 @@ edition = "2018"
 
 [dependencies]
 clap = "2.33.1"
-statrs = "0.12.0"
+statrs = "0.16.0"
 libmath = "0.2.1"
-itertools = "0.9.0"
+itertools = "0.10.5"
 plotlib = "0.5.1"
 chrono = "0.4.11"
 special-fun = "0.2.0"

@@ -1,5 +1,5 @@
 //
-// (c) 2020 Gabriel DiFiore <difioregabe@gmail.com>
+// (c) 2020-2023 Gabriel DiFiore <difioregabe@gmail.com>
 //
 // This source code is licensed under the MIT license found in the
 // LICENSE file in the root directory of this source tree.
@@ -12,46 +12,37 @@ use plotlib::style::BoxStyle;
 use plotlib::view::CategoricalView;
 use std::collections::BTreeMap;
 use std::fs;
-use std::io;
 use std::process;
 
-pub fn count_data(data: Vec<f64>) -> io::Result<BTreeMap<String, i32>> {
+pub fn count_data(data: Vec<f64>) -> BTreeMap<String, i32> {
     // count occurences of p-values (between 2 values e.g. 0.0-0.1)
 
-    let mut point_1: i32 = 0;
-    let mut point_2: i32 = 0;
-    let mut point_3: i32 = 0;
-    let mut point_4: i32 = 0;
-    let mut point_5: i32 = 0;
-    let mut point_6: i32 = 0;
-    let mut point_7: i32 = 0;
-    let mut point_8: i32 = 0;
-    let mut point_9: i32 = 0;
-    let mut one_point_zero: i32 = 0;
+    // create vector to hold counts of each p-value range
+    let mut counts: Vec<i32> = vec![0; 10];
 
     for i in 0..data.len() {
         if data[i] >= 0.0 && 0.1 >= data[i] {
-            point_1 += 1;
+            counts[0] += 1;
         } else if data[i] >= 0.1 && 0.2 >= data[i] {
-            point_2 += 1;
+            counts [1]+= 1;
         } else if data[i] >= 0.2 && 0.3 >= data[i] {
-            point_3 += 1;
+            counts[2] += 1;
         } else if data[i] >= 0.3 && 0.4 >= data[i] {
-            point_4 += 1;
+            counts[3] += 1;
         } else if data[i] >= 0.4 && 0.5 >= data[i] {
-            point_5 += 1;
+            counts[4] += 1;
         } else if data[i] >= 0.5 && 0.6 >= data[i] {
-            point_6 += 1;
+            counts[5] += 1;
         } else if data[i] >= 0.6 && 0.7 >= data[i] {
-            point_7 += 1;
+            counts[6] += 1;
         } else if data[i] >= 0.7 && 0.8 >= data[i] {
-            point_8 += 1;
+            counts[7] += 1;
         } else if data[i] >= 0.8 && 0.9 >= data[i] {
-            point_9 += 1;
+            counts[8] += 1;
         } else if data[i] >= 0.9 && 1.0 >= data[i] {
-            one_point_zero += 1;
+            counts[9] += 1;
         } else {
-            println!("[ERROR] number not between 0.0 and 1.0: {}", data[i]);
+            println!("[ERROR] Number not between 0.0 and 1.0: {}", data[i]);
             println!("Exiting program");
             process::exit(1);
         }
@@ -59,18 +50,18 @@ pub fn count_data(data: Vec<f64>) -> io::Result<BTreeMap<String, i32>> {
 
     let mut p_value_count = BTreeMap::new();
 
-    p_value_count.insert(String::from("0.1"), point_1);
-    p_value_count.insert(String::from("0.2"), point_2);
-    p_value_count.insert(String::from("0.3"), point_3);
-    p_value_count.insert(String::from("0.4"), point_4);
-    p_value_count.insert(String::from("0.5"), point_5);
-    p_value_count.insert(String::from("0.6"), point_6);
-    p_value_count.insert(String::from("0.7"), point_7);
-    p_value_count.insert(String::from("0.8"), point_8);
-    p_value_count.insert(String::from("0.9"), point_9);
-    p_value_count.insert(String::from("1.0"), one_point_zero);
+    p_value_count.insert(String::from("0.1"), counts[0]);
+    p_value_count.insert(String::from("0.2"), counts[1]);
+    p_value_count.insert(String::from("0.3"), counts[2]);
+    p_value_count.insert(String::from("0.4"), counts[3]);
+    p_value_count.insert(String::from("0.5"), counts[4]);
+    p_value_count.insert(String::from("0.6"), counts[5]);
+    p_value_count.insert(String::from("0.7"), counts[6]);
+    p_value_count.insert(String::from("0.8"), counts[7]);
+    p_value_count.insert(String::from("0.9"), counts[8]);
+    p_value_count.insert(String::from("1.0"), counts[9]);
 
-    return Ok(p_value_count);
+    p_value_count
 }
 
 pub fn plot_data(p_value_count: BTreeMap<String, i32>, test_name: String, source: &str) {

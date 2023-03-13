@@ -1,5 +1,5 @@
 //
-// (c) 2020 Gabriel DiFiore <difioregabe@gmail.com>
+// (c) 2020-2023 Gabriel DiFiore <difioregabe@gmail.com>
 //
 // This source code is licensed under the MIT license found in the
 // LICENSE file in the root directory of this source tree.
@@ -8,10 +8,9 @@
 use crate::utilities::sub_strings;
 use math::round;
 use statrs::function::gamma::gamma_ur;
-use std::io;
 use std::process;
 
-pub fn block_frequency(content: &String) -> io::Result<f64> {
+pub fn block_frequency(content: &String) -> f64 {
     // perform Frequency Within a Block Test on [String]
     // return p-value as [f64]
 
@@ -86,5 +85,5 @@ pub fn block_frequency(content: &String) -> io::Result<f64> {
         println!("Input sequence IS NOT accepted as random\n\n");
     }
 
-    Ok(p_value)
+    p_value
 }

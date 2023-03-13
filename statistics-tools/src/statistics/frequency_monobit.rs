@@ -1,15 +1,14 @@
 //
-// (c) 2020 Gabriel DiFiore <difioregabe@gmail.com>
+// (c) 2020-2023 Gabriel DiFiore <difioregabe@gmail.com>
 //
 // This source code is licensed under the MIT license found in the
 // LICENSE file in the root directory of this source tree.
 //
 
 use statrs::function::erf::erfc;
-use std::io;
 use std::process;
 
-pub fn frequency_monobit(content: &String) -> io::Result<f64> {
+pub fn frequency_monobit(content: &String) -> f64 {
     // perform Frequency (Monobit) Test on [String]
     // return p-value as [f64]
 
@@ -57,5 +56,5 @@ pub fn frequency_monobit(content: &String) -> io::Result<f64> {
         println!("Input sequence IS NOT accepted as random\n\n");
     }
 
-    Ok(p_value)
+    p_value
 }

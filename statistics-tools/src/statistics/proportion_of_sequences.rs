@@ -1,13 +1,11 @@
 //
-// (c) 2020 Gabriel DiFiore <difioregabe@gmail.com>
+// (c) 2020-2023 Gabriel DiFiore <difioregabe@gmail.com>
 //
 // This source code is licensed under the MIT license found in the
 // LICENSE file in the root directory of this source tree.
 //
 
-use std::io;
-
-pub fn proportion_of_sequences(n_tests: i32, p_values: Vec<f64>) -> io::Result<f64> {
+pub fn proportion_of_sequences(n_tests: i32, p_values: Vec<f64>) -> f64 {
 
     let mut accepted_p_values: i32 = 0;
 
@@ -41,5 +39,5 @@ pub fn proportion_of_sequences(n_tests: i32, p_values: Vec<f64>) -> io::Result<f
         println!("{}", theo_proportion);
     }
 
-    Ok(real_proportion)
+    real_proportion
 }
