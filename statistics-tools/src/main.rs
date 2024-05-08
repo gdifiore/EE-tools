@@ -6,7 +6,6 @@
 //
 
 pub mod statistics;
-
 mod data;
 mod test_handler;
 mod utilities;
@@ -18,7 +17,17 @@ use test_handler::test_handler;
 use utilities::file_to_vector;
 
 fn main() {
-    let matches = App::new("statistics-tools (Part of EE-tools for IB CompSci Extended Essay)")
+    let matches = parse_cli_args();
+    let (data, source, test_name) = extract_cli_args(&matches);
+    let n_tests = data.len() as i32;
+
+    run_test(&test_name, n_tests, data, source);
+
+    print_elapsed_time();
+}
+
+fn parse_cli_args() -> clap::ArgMatches<'static> {
+    App::new("statistics-tools (Part of EE-tools for IB CompSci Extended Essay)")
         .version("1.1.0")
         .author("Gabriel DiFiore <difioregabe@gmail.com>")
         .about("Program to automatically run a series of NIST randomness tests from an input file and plot the data")
@@ -30,7 +39,7 @@ fn main() {
                 .takes_value(true)
                 .value_name("source")
                 .display_order(3)
-                .help("Source of Data (random.org, HotBits, etc.)")
+                .help("Source of Data (random.org, HotBits, etc.)"),
         )
         .arg(
             Arg::with_name("input")
@@ -50,29 +59,34 @@ fn main() {
                 .takes_value(true)
                 .value_name("test_name")
                 .display_order(2)
-                .help("Test to perform n trials of (frequency_monobit, block_frequency, runs_test)")
+                .help("Test to perform n trials of (frequency_monobit, block_frequency, runs_test)"),
         )
-        .get_matches();
+        .get_matches()
+}
 
-    let now = Instant::now();
+fn extract_cli_args<'a>(matches: &'a clap::ArgMatches) -> (Vec<String>, &'a str, &'a str) {
+    let data = file_to_vector(matches.value_of("input").unwrap()).unwrap();
+    let source = matches.value_of("source").unwrap();
+    let test_name = matches.value_of("test").unwrap();
 
-    if matches.is_present("test") {
-        let data = file_to_vector(matches.value_of("input").unwrap());
-        let copy_data = data.unwrap().clone();
-        let n_tests: i32 = copy_data.len() as i32;
-        let source = matches.value_of("source");
+    (data, source, test_name)
+}
 
-        if matches.value_of("test").unwrap() == "frequency_monobit_test" {
-            test_handler("frequency_monobit_test", n_tests, copy_data, source.unwrap());
-        } else if matches.value_of("test").unwrap() == "block_frequency_test" {
-            test_handler("block_frequency_test", n_tests, copy_data, source.unwrap());
-        } else if matches.value_of("test").unwrap() == "runs_test" {
-            test_handler("runs_test", n_tests, copy_data, source.unwrap());
-        }
-
+fn run_test(test_name: &str, n_tests: i32, data: Vec<String>, source: &str) {
+    if test_name == "frequency_monobit_test" {
+        test_handler("frequency_monobit_test", n_tests, data, source);
+    } else if test_name == "block_frequency_test" {
+        test_handler("block_frequency_test", n_tests, data, source);
+    } else if test_name == "runs_test" {
+        test_handler("runs_test", n_tests, data, source);
     }
+}
 
+fn print_elapsed_time() {
+    let now = Instant::now();
     let elapsed = now.elapsed();
-    println!("Elapsed: {} ms",
-             (elapsed.as_secs() * 1_000) + (elapsed.subsec_nanos() / 1_000_000) as u64);
+    println!(
+        "Elapsed: {} ms",
+        (elapsed.as_secs() * 1_000) + (elapsed.subsec_nanos() / 1_000_000) as u64
+    );
 }

@@ -1,5 +1,5 @@
 //
-// (c) 2020-2023 Gabriel DiFiore <difioregabe@gmail.com>
+// (c) 2020-2024 Gabriel DiFiore <difioregabe@gmail.com>
 //
 // This source code is licensed under the MIT license found in the
 // LICENSE file in the root directory of this source tree.
@@ -10,7 +10,7 @@ use math::round;
 use statrs::function::gamma::gamma_ur;
 use std::process;
 
-pub fn block_frequency(content: &String) -> f64 {
+pub fn block_frequency(content: &str) -> f64 {
     // perform Frequency Within a Block Test on [String]
     // return p-value as [f64]
 

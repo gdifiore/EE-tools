@@ -6,7 +6,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.5100000000000007
 Chi-Squared Value: 100.40000000000003
-P-value = 0.4418131550463652
+P-value = 0.44181315504636526
 Input sequence IS accepted as random
 
 
@@ -30,7 +30,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.2300000000000004
 Chi-Squared Value: 89.20000000000002
-P-value = 0.7495450951851821
+P-value = 0.7495450951851964
 Input sequence IS accepted as random
 
 
@@ -42,7 +42,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.6999999999999984
 Chi-Squared Value: 107.99999999999994
-P-value = 0.25199031426859225
+P-value = 0.2519903142685851
 Input sequence IS accepted as random
 
 
@@ -78,7 +78,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.5599999999999996
 Chi-Squared Value: 102.39999999999998
-P-value = 0.3873692167964717
+P-value = 0.38736921679647174
 Input sequence IS accepted as random
 
 
@@ -234,7 +234,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.549999999999999
 Chi-Squared Value: 101.99999999999996
-P-value = 0.398061860691978
+P-value = 0.39806186069197796
 Input sequence IS accepted as random
 
 
@@ -270,7 +270,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.51
 Chi-Squared Value: 100.39999999999999
-P-value = 0.44181315504636604
+P-value = 0.44181315504636615
 Input sequence IS accepted as random
 
 
@@ -450,7 +450,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.5299999999999985
 Chi-Squared Value: 101.19999999999993
-P-value = 0.4197560250276038
+P-value = 0.41975602502760384
 Input sequence IS accepted as random
 
 
@@ -498,7 +498,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.5099999999999976
 Chi-Squared Value: 100.3999999999999
-P-value = 0.4418131550463681
+P-value = 0.44181315504636814
 Input sequence IS accepted as random
 
 
@@ -630,7 +630,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.5599999999999996
 Chi-Squared Value: 102.39999999999998
-P-value = 0.3873692167964717
+P-value = 0.38736921679647174
 Input sequence IS accepted as random
 
 
@@ -666,7 +666,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 3.199999999999995
 Chi-Squared Value: 127.9999999999998
-P-value = 0.02651414369207372
+P-value = 0.026514143692073718
 Input sequence IS accepted as random
 
 
@@ -678,7 +678,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 3.259999999999997
 Chi-Squared Value: 130.3999999999999
-P-value = 0.01886787801159729
+P-value = 0.018867878011597287
 Input sequence IS accepted as random
 
 
@@ -894,7 +894,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.5499999999999985
 Chi-Squared Value: 101.99999999999994
-P-value = 0.39806186069197813
+P-value = 0.398061860691978
 Input sequence IS accepted as random
 
 
@@ -930,7 +930,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.429999999999999
 Chi-Squared Value: 97.19999999999996
-P-value = 0.532370973998314
+P-value = 0.5323709739983138
 Input sequence IS accepted as random
 
 
@@ -966,7 +966,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.549999999999999
 Chi-Squared Value: 101.99999999999996
-P-value = 0.398061860691978
+P-value = 0.39806186069197796
 Input sequence IS accepted as random
 
 
@@ -990,7 +990,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.3499999999999996
 Chi-Squared Value: 93.99999999999999
-P-value = 0.6232001244881915
+P-value = 0.6232001244881914
 Input sequence IS accepted as random
 
 
@@ -1086,7 +1086,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.619999999999999
 Chi-Squared Value: 104.79999999999997
-P-value = 0.3257868689988543
+P-value = 0.32578686899885423
 Input sequence IS accepted as random
 
 
@@ -1146,7 +1146,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.6799999999999997
 Chi-Squared Value: 107.19999999999999
-P-value = 0.26945005792542903
+P-value = 0.2694500579254291
 Input sequence IS accepted as random
 
 
@@ -1470,7 +1470,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.3499999999999983
 Chi-Squared Value: 93.99999999999993
-P-value = 0.6232001244881925
+P-value = 0.6232001244881924
 Input sequence IS accepted as random
 
 
@@ -1686,7 +1686,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.8999999999999972
 Chi-Squared Value: 115.99999999999989
-P-value = 0.11664290879818877
+P-value = 0.11664290879818878
 Input sequence IS accepted as random
 
 
@@ -1794,7 +1794,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.3499999999999996
 Chi-Squared Value: 93.99999999999999
-P-value = 0.6232001244881915
+P-value = 0.6232001244881914
 Input sequence IS accepted as random
 
 
@@ -1986,7 +1986,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.5299999999999985
 Chi-Squared Value: 101.19999999999993
-P-value = 0.4197560250276038
+P-value = 0.41975602502760384
 Input sequence IS accepted as random
 
 
@@ -2106,7 +2106,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.5499999999999994
 Chi-Squared Value: 101.99999999999997
-P-value = 0.3980618606919662
+P-value = 0.3980618606919663
 Input sequence IS accepted as random
 
 
@@ -2142,7 +2142,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.1500000000000004
 Chi-Squared Value: 86.00000000000001
-P-value = 0.821156130863409
+P-value = 0.821156130863404
 Input sequence IS accepted as random
 
 
@@ -2178,7 +2178,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.429999999999999
 Chi-Squared Value: 97.19999999999996
-P-value = 0.532370973998314
+P-value = 0.5323709739983138
 Input sequence IS accepted as random
 
 
@@ -2226,7 +2226,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 3.129999999999997
 Chi-Squared Value: 125.19999999999987
-P-value = 0.03873142157788466
+P-value = 0.038731421577884666
 Input sequence IS accepted as random
 
 
@@ -2646,7 +2646,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.1500000000000004
 Chi-Squared Value: 86.00000000000001
-P-value = 0.821156130863409
+P-value = 0.821156130863404
 Input sequence IS accepted as random
 
 
@@ -2670,7 +2670,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.5599999999999996
 Chi-Squared Value: 102.39999999999998
-P-value = 0.3873692167964717
+P-value = 0.38736921679647174
 Input sequence IS accepted as random
 
 
@@ -2790,7 +2790,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.3499999999999996
 Chi-Squared Value: 93.99999999999999
-P-value = 0.6232001244881915
+P-value = 0.6232001244881914
 Input sequence IS accepted as random
 
 
@@ -2862,7 +2862,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.6199999999999983
 Chi-Squared Value: 104.79999999999993
-P-value = 0.3257868689988548
+P-value = 0.32578686899885473
 Input sequence IS accepted as random
 
 
@@ -2874,7 +2874,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.6799999999999993
 Chi-Squared Value: 107.19999999999997
-P-value = 0.2694500579254292
+P-value = 0.26945005792542925
 Input sequence IS accepted as random
 
 
@@ -2886,7 +2886,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.509999999999998
 Chi-Squared Value: 100.39999999999992
-P-value = 0.4418131550463676
+P-value = 0.44181315504636764
 Input sequence IS accepted as random
 
 
@@ -2946,7 +2946,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.7399999999999993
 Chi-Squared Value: 109.59999999999997
-P-value = 0.21917593232809404
+P-value = 0.21917593232809407
 Input sequence IS accepted as random
 
 
@@ -3138,7 +3138,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.509999999999998
 Chi-Squared Value: 100.39999999999992
-P-value = 0.4418131550463676
+P-value = 0.44181315504636764
 Input sequence IS accepted as random
 
 
@@ -3222,7 +3222,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 3.8399999999999994
 Chi-Squared Value: 153.59999999999997
-P-value = 0.00036295735825795674
+P-value = 0.0003629573582579568
 Input sequence IS NOT accepted as random
 
 
@@ -3246,7 +3246,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.6700000000000017
 Chi-Squared Value: 106.80000000000007
-P-value = 0.2784352785571405
+P-value = 0.2784352785571484
 Input sequence IS accepted as random
 
 
@@ -3294,7 +3294,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.4299999999999997
 Chi-Squared Value: 97.19999999999999
-P-value = 0.5323709739983133
+P-value = 0.5323709739983267
 Input sequence IS accepted as random
 
 
@@ -3306,7 +3306,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.4099999999999984
 Chi-Squared Value: 96.39999999999993
-P-value = 0.5552400293336078
+P-value = 0.5552400293336077
 Input sequence IS accepted as random
 
 
@@ -3318,7 +3318,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.4899999999999984
 Chi-Squared Value: 99.59999999999994
-P-value = 0.46417093060101866
+P-value = 0.4641709306010187
 Input sequence IS accepted as random
 
 
@@ -3354,7 +3354,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.6199999999999997
 Chi-Squared Value: 104.79999999999998
-P-value = 0.3257868689988541
+P-value = 0.32578686899885406
 Input sequence IS accepted as random
 
 
@@ -3414,7 +3414,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.6099999999999985
 Chi-Squared Value: 104.39999999999995
-P-value = 0.3357146579410669
+P-value = 0.3357146579410478
 Input sequence IS accepted as random
 
 
@@ -3522,7 +3522,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.55
 Chi-Squared Value: 102
-P-value = 0.3980618606919772
+P-value = 0.39806186069197713
 Input sequence IS accepted as random
 
 
@@ -3546,7 +3546,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.7399999999999993
 Chi-Squared Value: 109.59999999999997
-P-value = 0.21917593232809404
+P-value = 0.21917593232809407
 Input sequence IS accepted as random
 
 
@@ -3678,7 +3678,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.409999999999999
 Chi-Squared Value: 96.39999999999995
-P-value = 0.5552400293336075
+P-value = 0.5552400293336074
 Input sequence IS accepted as random
 
 
@@ -3762,7 +3762,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.559999999999998
 Chi-Squared Value: 102.39999999999992
-P-value = 0.38736921679647296
+P-value = 0.387369216796473
 Input sequence IS accepted as random
 
 
@@ -3870,7 +3870,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.3499999999999996
 Chi-Squared Value: 93.99999999999999
-P-value = 0.6232001244881915
+P-value = 0.6232001244881914
 Input sequence IS accepted as random
 
 
@@ -3906,7 +3906,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.429999999999999
 Chi-Squared Value: 97.19999999999996
-P-value = 0.532370973998314
+P-value = 0.5323709739983138
 Input sequence IS accepted as random
 
 
@@ -3966,7 +3966,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.779999999999998
 Chi-Squared Value: 111.19999999999992
-P-value = 0.1892417697681281
+P-value = 0.18924176976811732
 Input sequence IS accepted as random
 
 
@@ -3990,7 +3990,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.629999999999999
 Chi-Squared Value: 105.19999999999996
-P-value = 0.3160057527004514
+P-value = 0.31600575270045134
 Input sequence IS accepted as random
 
 
@@ -4014,7 +4014,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.35
 Chi-Squared Value: 94
-P-value = 0.6232001244881912
+P-value = 0.6232001244881911
 Input sequence IS accepted as random
 
 
@@ -4050,7 +4050,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.4099999999999984
 Chi-Squared Value: 96.39999999999993
-P-value = 0.5552400293336078
+P-value = 0.5552400293336077
 Input sequence IS accepted as random
 
 
@@ -4158,7 +4158,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 3.1299999999999972
 Chi-Squared Value: 125.19999999999989
-P-value = 0.038731421577884645
+P-value = 0.03873142157788465
 Input sequence IS accepted as random
 
 
@@ -4170,7 +4170,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.3999999999999986
 Chi-Squared Value: 95.99999999999994
-P-value = 0.56665796374101
+P-value = 0.5666579637410099
 Input sequence IS accepted as random
 
 
@@ -4182,7 +4182,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.9
 Chi-Squared Value: 116
-P-value = 0.11664290879818501
+P-value = 0.11664290879818502
 Input sequence IS accepted as random
 
 
@@ -4194,7 +4194,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.629999999999999
 Chi-Squared Value: 105.19999999999996
-P-value = 0.3160057527004514
+P-value = 0.31600575270045134
 Input sequence IS accepted as random
 
 
@@ -4626,7 +4626,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.549999999999999
 Chi-Squared Value: 101.99999999999996
-P-value = 0.398061860691978
+P-value = 0.39806186069197796
 Input sequence IS accepted as random
 
 
@@ -4674,7 +4674,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.4299999999999997
 Chi-Squared Value: 97.19999999999999
-P-value = 0.5323709739983133
+P-value = 0.5323709739983267
 Input sequence IS accepted as random
 
 
@@ -4734,7 +4734,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.43
 Chi-Squared Value: 97.2
-P-value = 0.532370973998313
+P-value = 0.5323709739983129
 Input sequence IS accepted as random
 
 
@@ -4770,7 +4770,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.55
 Chi-Squared Value: 102
-P-value = 0.3980618606919772
+P-value = 0.39806186069197713
 Input sequence IS accepted as random
 
 
@@ -4806,7 +4806,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.3499999999999988
 Chi-Squared Value: 93.99999999999994
-P-value = 0.6232001244881924
+P-value = 0.6232001244881923
 Input sequence IS accepted as random
 
 
@@ -4974,7 +4974,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.4799999999999986
 Chi-Squared Value: 99.19999999999995
-P-value = 0.475442031958075
+P-value = 0.47544203195807505
 Input sequence IS accepted as random
 
 
@@ -4998,7 +4998,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.1500000000000004
 Chi-Squared Value: 86.00000000000001
-P-value = 0.821156130863409
+P-value = 0.821156130863404
 Input sequence IS accepted as random
 
 
@@ -5118,7 +5118,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.51
 Chi-Squared Value: 100.39999999999999
-P-value = 0.44181315504636604
+P-value = 0.44181315504636615
 Input sequence IS accepted as random
 
 
@@ -5166,7 +5166,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.62
 Chi-Squared Value: 104.80000000000001
-P-value = 0.3257868689988534
+P-value = 0.32578686899885334
 Input sequence IS accepted as random
 
 
@@ -5286,7 +5286,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.479999999999998
 Chi-Squared Value: 99.19999999999993
-P-value = 0.47544203195807566
+P-value = 0.4754420319580758
 Input sequence IS accepted as random
 
 
@@ -5358,7 +5358,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.879999999999999
 Chi-Squared Value: 115.19999999999996
-P-value = 0.12700561206007835
+P-value = 0.12700561206007838
 Input sequence IS accepted as random
 
 
@@ -5430,7 +5430,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.4599999999999995
 Chi-Squared Value: 98.39999999999998
-P-value = 0.49812574145161126
+P-value = 0.49812574145162547
 Input sequence IS accepted as random
 
 
@@ -5454,7 +5454,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.4299999999999997
 Chi-Squared Value: 97.19999999999999
-P-value = 0.5323709739983133
+P-value = 0.5323709739983267
 Input sequence IS accepted as random
 
 
@@ -5502,7 +5502,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.51
 Chi-Squared Value: 100.39999999999999
-P-value = 0.44181315504636604
+P-value = 0.44181315504636615
 Input sequence IS accepted as random
 
 
@@ -5514,7 +5514,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 3.0899999999999967
 Chi-Squared Value: 123.59999999999987
-P-value = 0.04767114874537938
+P-value = 0.04767114874537939
 Input sequence IS accepted as random
 
 
@@ -5526,7 +5526,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.55
 Chi-Squared Value: 102
-P-value = 0.3980618606919772
+P-value = 0.39806186069197713
 Input sequence IS accepted as random
 
 
@@ -5958,7 +5958,7 @@ Data Length: 1000
 Number of blocks: 99
 Proportion Sum: 2.6299999999999977
 Chi-Squared Value: 105.1999999999999
-P-value = 0.31600575270045206
+P-value = 0.316005752700452
 Input sequence IS accepted as random
 
 
@@ -6011,4 +6011,4 @@ The data is considered uniformly distributed
 
 
 0.89540416
-Elapsed: 53 ms
+Elapsed: 0 ms

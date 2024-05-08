@@ -148,7 +148,7 @@ Pre-test proportion: 0.505
 tau: 0.06324555320336758
 0.0050000000000000044
 vobs is: 530
-P-value = 0.057338835638042554
+P-value = 0.05733883563804254
 Input sequence IS accepted as random
 
 
@@ -218,7 +218,7 @@ Pre-test proportion: 0.482
 tau: 0.06324555320336758
 0.018000000000000016
 vobs is: 522
-P-value = 0.15150262504481693
+P-value = 0.15150262504481696
 Input sequence IS accepted as random
 
 
@@ -372,7 +372,7 @@ Pre-test proportion: 0.492
 tau: 0.06324555320336758
 0.008000000000000007
 vobs is: 472
-P-value = 0.07786146213767842
+P-value = 0.0778614621376784
 Input sequence IS accepted as random
 
 
@@ -554,7 +554,7 @@ Pre-test proportion: 0.485
 tau: 0.06324555320336758
 0.015000000000000013
 vobs is: 511
-P-value = 0.4685661969834699
+P-value = 0.4685661969834698
 Input sequence IS accepted as random
 
 
@@ -736,7 +736,7 @@ Pre-test proportion: 0.491
 tau: 0.06324555320336758
 0.009000000000000008
 vobs is: 521
-P-value = 0.18062400975230047
+P-value = 0.18062400975230045
 Input sequence IS accepted as random
 
 
@@ -1226,7 +1226,7 @@ Pre-test proportion: 0.517
 tau: 0.06324555320336758
 0.017000000000000015
 vobs is: 522
-P-value = 0.15282877414592436
+P-value = 0.15282877414592433
 Input sequence IS accepted as random
 
 
@@ -1492,7 +1492,7 @@ Pre-test proportion: 0.516
 tau: 0.06324555320336758
 0.016000000000000014
 vobs is: 485
-P-value = 0.35901645597237414
+P-value = 0.359016455972374
 Input sequence IS accepted as random
 
 
@@ -1646,7 +1646,7 @@ Pre-test proportion: 0.494
 tau: 0.06324555320336758
 0.006000000000000005
 vobs is: 513
-P-value = 0.4083136172460039
+P-value = 0.40831361724600396
 Input sequence IS accepted as random
 
 
@@ -1898,7 +1898,7 @@ Pre-test proportion: 0.469
 tau: 0.06324555320336758
 0.031000000000000028
 vobs is: 474
-P-value = 0.12633814693587592
+P-value = 0.1263381469358759
 Input sequence IS accepted as random
 
 
@@ -2164,7 +2164,7 @@ Pre-test proportion: 0.472
 tau: 0.06324555320336758
 0.028000000000000025
 vobs is: 476
-P-value = 0.15468184736175764
+P-value = 0.1546818473617576
 Input sequence IS accepted as random
 
 
@@ -2570,7 +2570,7 @@ Pre-test proportion: 0.52
 tau: 0.06324555320336758
 0.020000000000000018
 vobs is: 474
-P-value = 0.11041243816552121
+P-value = 0.11041243816552118
 Input sequence IS accepted as random
 
 
@@ -2808,7 +2808,7 @@ Pre-test proportion: 0.479
 tau: 0.06324555320336758
 0.02100000000000002
 vobs is: 471
-P-value = 0.07483390651548656
+P-value = 0.07483390651548658
 Input sequence IS accepted as random
 
 
@@ -3144,7 +3144,7 @@ Pre-test proportion: 0.488
 tau: 0.06324555320336758
 0.01200000000000001
 vobs is: 477
-P-value = 0.1506438838903857
+P-value = 0.15064388389038566
 Input sequence IS accepted as random
 
 
@@ -3312,7 +3312,7 @@ Pre-test proportion: 0.507
 tau: 0.06324555320336758
 0.007000000000000006
 vobs is: 521
-P-value = 0.18200197144501484
+P-value = 0.18200197144501482
 Input sequence IS accepted as random
 
 
@@ -3396,7 +3396,7 @@ Pre-test proportion: 0.533
 tau: 0.06324555320336758
 0.03300000000000003
 vobs is: 520
-P-value = 0.1588953217273011
+P-value = 0.15889532172730111
 Input sequence IS accepted as random
 
 
@@ -3522,7 +3522,7 @@ Pre-test proportion: 0.514
 tau: 0.06324555320336758
 0.014000000000000012
 vobs is: 479
-P-value = 0.19210166543338356
+P-value = 0.19210166543338353
 Input sequence IS accepted as random
 
 
@@ -3690,7 +3690,7 @@ Pre-test proportion: 0.529
 tau: 0.06324555320336758
 0.029000000000000026
 vobs is: 482
-P-value = 0.30042405813227924
+P-value = 0.3004240581322793
 Input sequence IS accepted as random
 
 
@@ -3886,7 +3886,7 @@ Pre-test proportion: 0.485
 tau: 0.06324555320336758
 0.015000000000000013
 vobs is: 513
-P-value = 0.3945366589875775
+P-value = 0.3945366589875776
 Input sequence IS accepted as random
 
 
@@ -3984,7 +3984,7 @@ Pre-test proportion: 0.497
 tau: 0.06324555320336758
 0.0030000000000000027
 vobs is: 522
-P-value = 0.16374358973703892
+P-value = 0.1637435897370389
 Input sequence IS accepted as random
 
 
@@ -4138,7 +4138,7 @@ Pre-test proportion: 0.509
 tau: 0.06324555320336758
 0.009000000000000008
 vobs is: 513
-P-value = 0.40500956215818357
+P-value = 0.40500956215818346
 Input sequence IS accepted as random
 
 
@@ -4222,7 +4222,7 @@ Pre-test proportion: 0.494
 tau: 0.06324555320336758
 0.006000000000000005
 vobs is: 513
-P-value = 0.4083136172460039
+P-value = 0.40831361724600396
 Input sequence IS accepted as random
 
 
@@ -4306,7 +4306,7 @@ Pre-test proportion: 0.509
 tau: 0.06324555320336758
 0.009000000000000008
 vobs is: 513
-P-value = 0.40500956215818357
+P-value = 0.40500956215818346
 Input sequence IS accepted as random
 
 
@@ -4334,7 +4334,7 @@ Pre-test proportion: 0.493
 tau: 0.06324555320336758
 0.007000000000000006
 vobs is: 534
-P-value = 0.031008030133012444
+P-value = 0.03100803013301245
 Input sequence IS accepted as random
 
 
@@ -4586,7 +4586,7 @@ Pre-test proportion: 0.487
 tau: 0.06324555320336758
 0.013000000000000012
 vobs is: 527
-P-value = 0.08359873976850393
+P-value = 0.08359873976850392
 Input sequence IS accepted as random
 
 
@@ -4768,7 +4768,7 @@ Pre-test proportion: 0.52
 tau: 0.06324555320336758
 0.020000000000000018
 vobs is: 486
-P-value = 0.4030541042605017
+P-value = 0.40305410426050164
 Input sequence IS accepted as random
 
 
@@ -4992,7 +4992,7 @@ Pre-test proportion: 0.507
 tau: 0.06324555320336758
 0.007000000000000006
 vobs is: 524
-P-value = 0.12741128630520887
+P-value = 0.1274112863052089
 Input sequence IS accepted as random
 
 
@@ -5244,7 +5244,7 @@ Pre-test proportion: 0.501
 tau: 0.06324555320336758
 0.0010000000000000009
 vobs is: 488
-P-value = 0.4479583359000387
+P-value = 0.44795833590003875
 Input sequence IS accepted as random
 
 
@@ -5314,7 +5314,7 @@ Pre-test proportion: 0.488
 tau: 0.06324555320336758
 0.01200000000000001
 vobs is: 488
-P-value = 0.45859714478832925
+P-value = 0.4585971447883292
 Input sequence IS accepted as random
 
 
@@ -5328,7 +5328,7 @@ Pre-test proportion: 0.519
 tau: 0.06324555320336758
 0.019000000000000017
 vobs is: 487
-P-value = 0.43677429608872137
+P-value = 0.4367742960887215
 Input sequence IS accepted as random
 
 
@@ -5496,7 +5496,7 @@ Pre-test proportion: 0.484
 tau: 0.06324555320336758
 0.016000000000000014
 vobs is: 528
-P-value = 0.07105815250096145
+P-value = 0.07105815250096147
 Input sequence IS accepted as random
 
 
@@ -5510,7 +5510,7 @@ Pre-test proportion: 0.511
 tau: 0.06324555320336758
 0.01100000000000001
 vobs is: 487
-P-value = 0.4195066297616063
+P-value = 0.41950662976160635
 Input sequence IS accepted as random
 
 
@@ -5538,7 +5538,7 @@ Pre-test proportion: 0.543
 tau: 0.06324555320336758
 0.04300000000000004
 vobs is: 527
-P-value = 0.05046769764803505
+P-value = 0.05046769764803506
 Input sequence IS accepted as random
 
 
@@ -5594,7 +5594,7 @@ Pre-test proportion: 0.513
 tau: 0.06324555320336758
 0.013000000000000012
 vobs is: 511
-P-value = 0.473026682775965
+P-value = 0.4730266827759651
 Input sequence IS accepted as random
 
 
@@ -5734,7 +5734,7 @@ Pre-test proportion: 0.494
 tau: 0.06324555320336758
 0.006000000000000005
 vobs is: 535
-P-value = 0.026522973086302668
+P-value = 0.02652297308630267
 Input sequence IS accepted as random
 
 
@@ -5930,7 +5930,7 @@ Pre-test proportion: 0.5
 tau: 0.06324555320336758
 0
 vobs is: 487
-P-value = 0.4109675221272368
+P-value = 0.41096752212723686
 Input sequence IS accepted as random
 
 
@@ -5944,7 +5944,7 @@ Pre-test proportion: 0.511
 tau: 0.06324555320336758
 0.01100000000000001
 vobs is: 522
-P-value = 0.1593121392221189
+P-value = 0.15931213922211887
 Input sequence IS accepted as random
 
 
@@ -6098,7 +6098,7 @@ Pre-test proportion: 0.475
 tau: 0.06324555320336758
 0.025000000000000022
 vobs is: 510
-P-value = 0.475662789876809
+P-value = 0.47566278987680904
 Input sequence IS accepted as random
 
 
@@ -6154,7 +6154,7 @@ Pre-test proportion: 0.494
 tau: 0.06324555320336758
 0.006000000000000005
 vobs is: 523
-P-value = 0.14445186653291522
+P-value = 0.1444518665329152
 Input sequence IS accepted as random
 
 
@@ -6196,7 +6196,7 @@ Pre-test proportion: 0.497
 tau: 0.06324555320336758
 0.0030000000000000027
 vobs is: 472
-P-value = 0.07676033348355395
+P-value = 0.07676033348355393
 Input sequence IS accepted as random
 
 
@@ -6364,7 +6364,7 @@ Pre-test proportion: 0.473
 tau: 0.06324555320336758
 0.027000000000000024
 vobs is: 510
-P-value = 0.4673565343656926
+P-value = 0.46735653436569247
 Input sequence IS accepted as random
 
 
@@ -6630,7 +6630,7 @@ Pre-test proportion: 0.511
 tau: 0.06324555320336758
 0.01100000000000001
 vobs is: 486
-P-value = 0.38399790320711463
+P-value = 0.3839979032071146
 Input sequence IS accepted as random
 
 
@@ -6672,7 +6672,7 @@ Pre-test proportion: 0.515
 tau: 0.06324555320336758
 0.015000000000000013
 vobs is: 513
-P-value = 0.3945366589875775
+P-value = 0.3945366589875776
 Input sequence IS accepted as random
 
 
@@ -6980,7 +6980,7 @@ Pre-test proportion: 0.483
 tau: 0.06324555320336758
 0.017000000000000015
 vobs is: 512
-P-value = 0.4257860786004488
+P-value = 0.42578607860044887
 Input sequence IS accepted as random
 
 
@@ -7000,7 +7000,7 @@ Input sequence IS accepted as random
 
 7 tests failed
 
-Expected amount of sequences had an acceptable P-Value
+Unexpected amount of sequences had an acceptable P-Value
 Real Proportion: 0.986
 Theoretical Proportion: .99 +/- 0.00005940000000000006
 
@@ -7011,4 +7011,4 @@ The data is considered uniformly distributed
 
 
 0.9227941
-Elapsed: 50 ms
+Elapsed: 0 ms
