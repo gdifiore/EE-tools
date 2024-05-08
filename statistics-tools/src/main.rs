@@ -17,13 +17,17 @@ use test_handler::test_handler;
 use utilities::file_to_vector;
 
 fn main() {
+    // start timer
+    let now = Instant::now();
+
     let matches = parse_cli_args();
+
     let (data, source, test_name) = extract_cli_args(&matches);
     let n_tests = data.len() as i32;
 
     run_test(&test_name, n_tests, data, source);
 
-    print_elapsed_time();
+    print_elapsed_time(now);
 }
 
 fn parse_cli_args() -> clap::ArgMatches<'static> {
@@ -82,8 +86,7 @@ fn run_test(test_name: &str, n_tests: i32, data: Vec<String>, source: &str) {
     }
 }
 
-fn print_elapsed_time() {
-    let now = Instant::now();
+fn print_elapsed_time(now: Instant) {
     let elapsed = now.elapsed();
     println!(
         "Elapsed: {} ms",
